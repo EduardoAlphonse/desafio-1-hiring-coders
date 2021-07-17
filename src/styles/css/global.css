@@ -4,8 +4,13 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Friz Quadrata Regular";
+  src: url("/src/assets/fonts/Friz Quadrata Regular.ttf");
+}
 :root {
-  --white: #ffffff;
+  --white: #fff;
+  --riot-points: #DFBA3E;
 }
 
 @media (max-width: 1400px) {
@@ -13,8 +18,20 @@
     font-size: 0.9375rem;
   }
 }
+body, button, input, textarea {
+  font: 400 1rem Poppins, sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
+}
+
+button {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=global.css.map */

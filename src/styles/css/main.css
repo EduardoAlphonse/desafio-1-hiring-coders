@@ -1,0 +1,111 @@
+section {
+  height: 100vh;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 4rem;
+  color: var(--white);
+  background: url("/src/assets/images/Lux_16.jpg") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+.welcome-section .gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, black, rgba(0, 0, 0, 0));
+  opacity: 0.7;
+}
+.welcome-section .logo {
+  padding: 1.5rem 0;
+}
+.welcome-section .welcome-text {
+  width: 600px;
+  padding-left: 8rem;
+}
+.welcome-section .welcome-text h1 {
+  position: relative;
+  font-family: "Friz Quadrata Regular";
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fade-in 1s ease-out 1s forwards;
+}
+.welcome-section .welcome-text p {
+  position: relative;
+  font-size: 1.5rem;
+  opacity: 0;
+  width: 400px;
+  animation: fade-in 1s ease-out 2s forwards;
+}
+.welcome-section .scroll-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.welcome-section .scroll-button span {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.welcome-section .scroll-button div {
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  animation: arrow-down-bouncing 2s linear 4s infinite forwards;
+}
+.welcome-section .scroll-button div img {
+  position: relative;
+  top: 1px;
+  width: 50%;
+}
+
+.week-offers {
+  background: url("/src/assets/svg/rp-background.svg") no-repeat center;
+  background-size: cover;
+}
+
+@keyframes arrow-down-bouncing {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(1rem);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(1rem);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    left: -2rem;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
