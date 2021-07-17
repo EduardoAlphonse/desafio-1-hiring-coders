@@ -9,8 +9,10 @@
   src: url("/src/assets/fonts/Friz Quadrata Regular.ttf");
 }
 :root {
-  --white: #fff;
-  --riot-points: #DFBA3E;
+  --white: #FFFFFF;
+  --gray-900: #F5F5F5;
+  --black-200: #3A3A3A;
+  --pontos-rito: #DFBA3E;
 }
 
 @media (max-width: 1400px) {
@@ -20,6 +22,7 @@
 }
 body, button, input, textarea {
   font: 400 1rem Poppins, sans-serif;
+  color: var(--black-200);
 }
 
 body {

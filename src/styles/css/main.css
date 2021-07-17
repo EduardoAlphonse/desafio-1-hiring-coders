@@ -36,14 +36,14 @@ section {
   font-size: 4rem;
   margin-bottom: 2rem;
   opacity: 0;
-  animation: fade-in 1s ease-out 1s forwards;
+  animation: fade-in-right 1s ease-out 1s forwards;
 }
 .welcome-section .welcome-text p {
   position: relative;
   font-size: 1.5rem;
   opacity: 0;
   width: 400px;
-  animation: fade-in 1s ease-out 2s forwards;
+  animation: fade-in-right 1s ease-out 1.5s forwards;
 }
 .welcome-section .scroll-button {
   display: flex;
@@ -64,7 +64,7 @@ section {
   width: 2rem;
   height: 2rem;
   border-radius: 2rem;
-  animation: arrow-down-bouncing 2s linear 4s infinite forwards;
+  animation: arrow-down-bouncing 2s linear 3s infinite forwards;
 }
 .welcome-section .scroll-button div img {
   position: relative;
@@ -74,7 +74,136 @@ section {
 
 .week-offers {
   background: url("/src/assets/svg/rp-background.svg") no-repeat center;
-  background-size: cover;
+  background-size: 115% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.week-offers h2 {
+  margin: 4rem 0;
+}
+.week-offers .offers {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  width: 100%;
+  padding: 0 4rem;
+}
+.week-offers .offer-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1.7rem;
+  color: var(--white);
+  filter: drop-shadow(0px 3px 10px rgba(58, 58, 58, 0.25));
+  position: relative;
+  width: 200px;
+  height: 300px;
+  border-radius: 0.75rem;
+  background-position: 50% 40px;
+  background-size: 150%;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+  transition: background-size 0.2s ease-out;
+}
+.week-offers .offer-card:hover {
+  background-size: 160%;
+}
+.week-offers .offer-card .transparent-black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.week-offers .offer-card .offer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background: var(--pontos-rito);
+}
+.week-offers .offer-card .offer img {
+  position: absolute;
+  left: 50%;
+  top: 22.5px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.week-offers .offer-card .offer div {
+  position: absolute;
+  top: -75px;
+  right: -150px;
+  width: 300px;
+  height: 150px;
+  background-color: var(--black-200);
+  transform: rotate(30deg);
+}
+.week-offers .offer-card .offer span {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-85%);
+  font-weight: 600;
+}
+.week-offers .offer-card .price {
+  position: relative;
+  bottom: 30px;
+  text-align: center;
+}
+.week-offers .offer-card .price .final-price span:nth-child(2) {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.week-offers .offer-card .price .base-price {
+  position: relative;
+  bottom: 10px;
+}
+.week-offers .offer-card .price .base-price::after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  height: 2px;
+  background-color: #fff;
+  left: -25%;
+  bottom: calc(50% - 2px);
+  transform: rotateZ(-20deg);
+}
+.week-offers .offer-card .rp-bonus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.week-offers .offer-card .rp-bonus span:nth-child(2) {
+  margin-bottom: 0.25rem;
+}
+.week-offers .offer-card .rp-bonus .total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  background: var(--black-200);
+  border: 1px solid var(--pontos-rito);
+}
+.week-offers .offer-card .rp-bonus .total img {
+  margin-right: 1rem;
+  width: 19px;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newsletter h2 {
+  width: 700px;
+  margin: 4rem 0;
+  text-align: center;
 }
 
 @keyframes arrow-down-bouncing {
@@ -97,7 +226,7 @@ section {
     transform: translateY(0);
   }
 }
-@keyframes fade-in {
+@keyframes fade-in-right {
   from {
     left: -2rem;
     opacity: 0;
