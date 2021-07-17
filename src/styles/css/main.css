@@ -216,11 +216,13 @@ section {
   justify-content: center;
   align-items: center;
 }
+.newsletter form p {
+  font-weight: 600;
+}
 .newsletter form input {
   margin: 1rem 0;
   text-align: center;
   padding: 0.5rem 1rem;
-  font-style: italic;
   width: 500px;
   border: 2px solid var(--black-200);
   border-radius: 3rem;
@@ -254,6 +256,7 @@ section {
   display: flex;
   align-items: flex-end;
   width: 100%;
+  font-size: 0.875rem;
   color: var(--white);
 }
 .newsletter footer .footer-content {
