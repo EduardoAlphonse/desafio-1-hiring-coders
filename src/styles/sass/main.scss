@@ -44,7 +44,7 @@ section {
 			margin-bottom: 2rem;
 			opacity: 0;
 			
-			animation: fade-in-right 1s ease-out 1s forwards;
+			animation: fade-right 1s ease-out 1s forwards;
 		}
 		
 		p {
@@ -53,7 +53,7 @@ section {
 			opacity: 0;
 			width: 400px;
 
-			animation: fade-in-right 1s ease-out 1.5s forwards;
+			animation: fade-right 1s ease-out 1.5s forwards;
 		}
 	}
 
@@ -173,7 +173,7 @@ section {
 
 				width: 300px;
 				height: 150px;
-				background-color: var(--black-200);
+				background-color: #000000;
 
 				transform: rotate(30deg);
 			}
@@ -270,16 +270,44 @@ section {
 			font-weight: 600;
 		}
 
-		input {
-			margin: 1rem 0;
-			text-align: center;
+		.input {
+			display: flex;
+			flex-direction: column;
+			position: relative;
 
-			padding: 0.5rem 1rem;
+			input {
+				margin: 1rem 0 2.5rem;
+				text-align: center;
+	
+				padding: 0.5rem 1rem;
+	
+				width: 500px;
+				border: 2px solid var(--black-200);
+				border-radius: 3rem;
+				outline: none;
+	
+				transition: border-color 0.2s ease-in-out;
+	
+				&:focus {
+					border-color: var(--pontos-rito);
+				}
+			}
 
-			width: 500px;
-			border: 2px solid var(--black-200);
-			border-radius: 3rem;
-			outline: none;
+			.error {
+				display: none;
+				position: absolute;
+				left: 0;
+				top: 70px;
+				opacity: 0;
+				
+				font-size: 0.875rem;
+				color: var(--danger);
+
+				&.show-error {
+					display: block;
+					animation: fade-up 0.3s ease-in-out forwards, fade-up (0.3s) ease-in-out 3.3s reverse forwards;
+				}
+			}
 		}
 
 		button {
@@ -398,13 +426,24 @@ section {
 	}
 }
 
-@keyframes fade-in-right {
+@keyframes fade-right {
 	from {
 		left: -2rem;
 		opacity: 0;
 	}
 	to {
 		left: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes fade-up {
+	from {
+		top: 70px;
+		opacity: 0;
+	}
+	to {
+		top: 65px;
 		opacity: 1;
 	}
 }

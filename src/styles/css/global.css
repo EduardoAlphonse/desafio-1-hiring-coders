@@ -13,13 +13,9 @@
   --gray-900: #F5F5F5;
   --black-200: #3A3A3A;
   --pontos-rito: #DFBA3E;
+  --danger: #CC0000;
 }
 
-@media (max-width: 1400px) {
-  html {
-    font-size: 0.9375rem;
-  }
-}
 body, button, input, textarea {
   font: 400 1rem Poppins, sans-serif;
   color: var(--black-200);

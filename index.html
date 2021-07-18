@@ -177,7 +177,10 @@
 		<form onsubmit='saveLead(event)'>
 			<p>Informe seu e-mail</p>
 
-			<input type='text' placeholder='meu_email@email.com' name='email'>
+			<div class="input">
+				<input type='text' placeholder='meu_email@email.com' name='email'>
+				<span class="error">Digite um e-mail válido 🙁</span>
+			</div>
 
 			<button type='submit'>
 				<img src='./src/assets/svg/rp-icon.svg' alt='rp icon'>
