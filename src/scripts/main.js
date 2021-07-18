@@ -17,6 +17,22 @@ function saveLead(event) {
 	}
 
 	localStorage.setItem('email_address', input.value);
+	handleModal('show');
+}
+
+function handleModal(action) {
+	const modal = document.querySelector('.thanks-container');
+	const body = document.querySelector('body');
+
+	if (action === 'show') {
+		modal.classList.add('show-modal');
+		body.classList.add('freeze-scroll');
+	} else {
+		setTimeout(() => {
+			modal.classList.remove('show-modal');
+			body.classList.remove('freeze-scroll');
+		}, 200);
+	}
 }
 
 function validateEmail(email) {

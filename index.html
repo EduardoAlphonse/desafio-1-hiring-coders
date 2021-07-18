@@ -20,7 +20,8 @@
 </head>
 
 <body>
-	<section class='welcome-section'>
+	</div>
+	<section class='welcome-section' id='welcome-stop'>
 		<div class='gradient'></div>
 
 		<div class='logo'>
@@ -36,7 +37,7 @@
 			</p>
 		</div>
 
-		<div class='scroll-button'>
+		<div class='bouncing'>
 			<span>
 				Veja os descontos da semana
 			</span>
@@ -46,7 +47,7 @@
 		</div>
 	</section>
 
-	<section class='week-offers'>
+	<section class='week-offers' id='offers-stop'>
 		<h2>Descontos da semana</h2>
 
 		<div class='offers'>
@@ -169,7 +170,7 @@
 		</div>
 	</section>
 
-	<section class='newsletter'>
+	<section class='newsletter' id='newsletter-stop'>
 		<h2>
 			Cadastre-se e fique por dentro dos próximos descontos, além de concorrer a ofertas exclusivas!
 		</h2>
@@ -177,9 +178,9 @@
 		<form onsubmit='saveLead(event)'>
 			<p>Informe seu e-mail</p>
 
-			<div class="input">
+			<div class='input'>
 				<input type='text' placeholder='meu_email@email.com' name='email'>
-				<span class="error">Digite um e-mail válido 🙁</span>
+				<span class='error'>Digite um e-mail válido 🙁</span>
 			</div>
 
 			<button type='submit'>
@@ -205,6 +206,24 @@
 			</div>
 		</footer>
 	</section>
+
+	<div class='thanks-container'>
+		<div class='thanks'>
+			<div class='left'>
+				<h2>
+					Muito bem!
+				</h2>
+				<p>
+					A partir de hoje, fique de olho no seu email e aproveite Pontos Rito e skins com desconto!
+				</p>
+				<button type='button' onclick='handleModal("hide")'>
+					Beleza!
+				</button>
+			</div>
+
+			<div class='right'></div>
+		</div>
+	</div>
 </body>
 
 </html>
